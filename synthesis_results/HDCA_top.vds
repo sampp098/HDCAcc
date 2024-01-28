@@ -1,0 +1,867 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Jan 28 17:06:27 2024
+# Process ID: 24148
+# Current directory: F:/HDCA_TCL/my_HDC_sim2/my_HDC_sim2.runs/synth_1
+# Command line: vivado.exe -log HDCA_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDCA_top.tcl
+# Log file: F:/HDCA_TCL/my_HDC_sim2/my_HDC_sim2.runs/synth_1/HDCA_top.vds
+# Journal file: F:/HDCA_TCL/my_HDC_sim2/my_HDC_sim2.runs/synth_1\vivado.jou
+# Running On: DESKTOP-1HEODMJ, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 12753 MB
+#-----------------------------------------------------------
+source HDCA_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 553.953 ; gain = 179.680
+Command: synth_design -top HDCA_top__Behavioral -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21440
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1002.156 ; gain = 443.250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'HDCA_top' [F:/HDCA_TCL/HDL/HDCA_top.vhd:100]
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXIS_input_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_output_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_output_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'HDCA' declared at 'F:/HDCA_TCL/HDL/HDCA.vhd:35' bound to instance 'U_HDCA' of component 'HDCA' [F:/HDCA_TCL/HDL/HDCA_top.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'HDCA' [F:/HDCA_TCL/HDL/HDCA.vhd:106]
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXIS_input_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_output_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_output_START_COUNT bound to: 32 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'axi_ctrl' declared at 'F:/HDCA_TCL/HDL/axi_ctrl.vhd:5' bound to instance 'ctrl_registers' of component 'axi_ctrl' [F:/HDCA_TCL/HDL/HDCA.vhd:525]
+INFO: [Synth 8-638] synthesizing module 'axi_ctrl' [F:/HDCA_TCL/HDL/axi_ctrl.vhd:103]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-226] default block is never used [F:/HDCA_TCL/HDL/axi_ctrl.vhd:242]
+INFO: [Synth 8-226] default block is never used [F:/HDCA_TCL/HDL/axi_ctrl.vhd:408]
+INFO: [Synth 8-256] done synthesizing module 'axi_ctrl' (0#1) [F:/HDCA_TCL/HDL/axi_ctrl.vhd:103]
+INFO: [Synth 8-3491] module 'stream_switch' declared at 'F:/HDCA_TCL/HDL/stream_switch.vhd:36' bound to instance 'u_stream_switch' of component 'stream_switch' [F:/HDCA_TCL/HDL/HDCA.vhd:571]
+INFO: [Synth 8-638] synthesizing module 'stream_switch' [F:/HDCA_TCL/HDL/stream_switch.vhd:75]
+INFO: [Synth 8-256] done synthesizing module 'stream_switch' (0#1) [F:/HDCA_TCL/HDL/stream_switch.vhd:75]
+INFO: [Synth 8-3491] module 'binary_cache' declared at 'F:/HDCA_TCL/HDL/binary_cache.vhd:35' bound to instance 'U_bcache' of component 'binary_cache' [F:/HDCA_TCL/HDL/HDCA.vhd:605]
+INFO: [Synth 8-638] synthesizing module 'binary_cache' [F:/HDCA_TCL/HDL/binary_cache.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'binary_cache' (0#1) [F:/HDCA_TCL/HDL/binary_cache.vhd:55]
+INFO: [Synth 8-3491] module 'binary_cache' declared at 'F:/HDCA_TCL/HDL/binary_cache.vhd:35' bound to instance 'U_bcache' of component 'binary_cache' [F:/HDCA_TCL/HDL/HDCA.vhd:605]
+INFO: [Synth 8-3491] module 'int_cache' declared at 'F:/HDCA_TCL/HDL/int_cache.vhd:35' bound to instance 'U_intcache' of component 'int_cache' [F:/HDCA_TCL/HDL/HDCA.vhd:624]
+INFO: [Synth 8-638] synthesizing module 'int_cache' [F:/HDCA_TCL/HDL/int_cache.vhd:56]
+WARNING: [Synth 8-614] signal 'addr2' is read in the process but is not in the sensitivity list [F:/HDCA_TCL/HDL/int_cache.vhd:62]
+WARNING: [Synth 8-614] signal 'addr1' is read in the process but is not in the sensitivity list [F:/HDCA_TCL/HDL/int_cache.vhd:62]
+WARNING: [Synth 8-614] signal 'addr2' is read in the process but is not in the sensitivity list [F:/HDCA_TCL/HDL/int_cache.vhd:87]
+WARNING: [Synth 8-614] signal 'addr1' is read in the process but is not in the sensitivity list [F:/HDCA_TCL/HDL/int_cache.vhd:87]
+INFO: [Synth 8-256] done synthesizing module 'int_cache' (0#1) [F:/HDCA_TCL/HDL/int_cache.vhd:56]
+INFO: [Synth 8-3491] module 'int_cache' declared at 'F:/HDCA_TCL/HDL/int_cache.vhd:35' bound to instance 'U_intcache' of component 'int_cache' [F:/HDCA_TCL/HDL/HDCA.vhd:624]
+INFO: [Synth 8-3491] module 'control' declared at 'F:/HDCA_TCL/HDL/control.vhd:35' bound to instance 'U_control' of component 'control' [F:/HDCA_TCL/HDL/HDCA.vhd:642]
+INFO: [Synth 8-638] synthesizing module 'control' [F:/HDCA_TCL/HDL/control.vhd:93]
+INFO: [Synth 8-3491] module 'inst_cache' declared at 'F:/HDCA_TCL/HDL/inst_cache.vhd:35' bound to instance 'U_Icache' of component 'inst_cache' [F:/HDCA_TCL/HDL/control.vhd:206]
+INFO: [Synth 8-638] synthesizing module 'inst_cache' [F:/HDCA_TCL/HDL/inst_cache.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'inst_cache' (0#1) [F:/HDCA_TCL/HDL/inst_cache.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'control' (0#1) [F:/HDCA_TCL/HDL/control.vhd:93]
+INFO: [Synth 8-3491] module 'bcache_In_MUX' declared at 'F:/HDCA_TCL/HDL/bcache_In_MUX.vhd:36' bound to instance 'U_binary_cache_MUX' of component 'bcache_In_MUX' [F:/HDCA_TCL/HDL/HDCA.vhd:702]
+INFO: [Synth 8-638] synthesizing module 'bcache_In_MUX' [F:/HDCA_TCL/HDL/bcache_In_MUX.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'bcache_In_MUX' (0#1) [F:/HDCA_TCL/HDL/bcache_In_MUX.vhd:45]
+INFO: [Synth 8-3491] module 'bcache_In_MUX' declared at 'F:/HDCA_TCL/HDL/bcache_In_MUX.vhd:36' bound to instance 'U_binary_cache_MUX' of component 'bcache_In_MUX' [F:/HDCA_TCL/HDL/HDCA.vhd:702]
+INFO: [Synth 8-3491] module 'INTCache_In_MUX' declared at 'F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:36' bound to instance 'U_int_cache_MUX' of component 'INTCache_In_MUX' [F:/HDCA_TCL/HDL/HDCA.vhd:711]
+INFO: [Synth 8-638] synthesizing module 'INTCache_In_MUX' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'INTCache_In_MUX' (0#1) [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:45]
+INFO: [Synth 8-3491] module 'INTCache_In_MUX' declared at 'F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:36' bound to instance 'U_int_cache_MUX' of component 'INTCache_In_MUX' [F:/HDCA_TCL/HDL/HDCA.vhd:711]
+INFO: [Synth 8-3491] module 'XOR_PE' declared at 'F:/HDCA_TCL/HDL/XOR_PE.vhd:35' bound to instance 'uXOR_PE' of component 'XOR_PE' [F:/HDCA_TCL/HDL/HDCA.vhd:721]
+INFO: [Synth 8-638] synthesizing module 'XOR_PE' [F:/HDCA_TCL/HDL/XOR_PE.vhd:47]
+INFO: [Synth 8-3491] module 'XOR_thread' declared at 'F:/HDCA_TCL/HDL/XOR_thread.vhd:36' bound to instance 'uXOR_thread' of component 'XOR_thread' [F:/HDCA_TCL/HDL/XOR_PE.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'XOR_thread' [F:/HDCA_TCL/HDL/XOR_thread.vhd:48]
+INFO: [Synth 8-3491] module 'bcache_out_mux' declared at 'F:/HDCA_TCL/HDL/bcache_out_mux.vhd:33' bound to instance 'uXOR_In_MUX' of component 'bcache_out_mux' [F:/HDCA_TCL/HDL/XOR_thread.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'bcache_out_mux' [F:/HDCA_TCL/HDL/bcache_out_mux.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'bcache_out_mux' (0#1) [F:/HDCA_TCL/HDL/bcache_out_mux.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'XOR_thread' (0#1) [F:/HDCA_TCL/HDL/XOR_thread.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'XOR_PE' (0#1) [F:/HDCA_TCL/HDL/XOR_PE.vhd:47]
+INFO: [Synth 8-3491] module 'ROT_PE' declared at 'F:/HDCA_TCL/HDL/ROT_PE.vhd:36' bound to instance 'uROT_PE' of component 'ROT_PE' [F:/HDCA_TCL/HDL/HDCA.vhd:733]
+INFO: [Synth 8-638] synthesizing module 'ROT_PE' [F:/HDCA_TCL/HDL/ROT_PE.vhd:50]
+INFO: [Synth 8-3491] module 'ROT_thread' declared at 'F:/HDCA_TCL/HDL/ROT_thread.vhd:36' bound to instance 'uROT_thread' of component 'ROT_thread' [F:/HDCA_TCL/HDL/ROT_PE.vhd:68]
+INFO: [Synth 8-638] synthesizing module 'ROT_thread' [F:/HDCA_TCL/HDL/ROT_thread.vhd:49]
+INFO: [Synth 8-3491] module 'bcache_out_mux' declared at 'F:/HDCA_TCL/HDL/bcache_out_mux.vhd:33' bound to instance 'uROT_In_MUX' of component 'bcache_out_mux' [F:/HDCA_TCL/HDL/ROT_thread.vhd:105]
+	Parameter amount bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'shift' declared at 'F:/HDCA_TCL/HDL/shift.vhd:36' bound to instance 'u_shift' of component 'shift' [F:/HDCA_TCL/HDL/ROT_thread.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'shift' [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift' (0#1) [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'shift' declared at 'F:/HDCA_TCL/HDL/shift.vhd:36' bound to instance 'u_shift' of component 'shift' [F:/HDCA_TCL/HDL/ROT_thread.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'shift__parameterized1' [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift__parameterized1' (0#1) [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'shift' declared at 'F:/HDCA_TCL/HDL/shift.vhd:36' bound to instance 'u_shift' of component 'shift' [F:/HDCA_TCL/HDL/ROT_thread.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'shift__parameterized3' [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift__parameterized3' (0#1) [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'shift' declared at 'F:/HDCA_TCL/HDL/shift.vhd:36' bound to instance 'u_shift' of component 'shift' [F:/HDCA_TCL/HDL/ROT_thread.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'shift__parameterized5' [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift__parameterized5' (0#1) [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'shift' declared at 'F:/HDCA_TCL/HDL/shift.vhd:36' bound to instance 'u_shift' of component 'shift' [F:/HDCA_TCL/HDL/ROT_thread.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'shift__parameterized7' [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift__parameterized7' (0#1) [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'shift' declared at 'F:/HDCA_TCL/HDL/shift.vhd:36' bound to instance 'u_shift' of component 'shift' [F:/HDCA_TCL/HDL/ROT_thread.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'shift__parameterized9' [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift__parameterized9' (0#1) [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'shift' declared at 'F:/HDCA_TCL/HDL/shift.vhd:36' bound to instance 'u_shift' of component 'shift' [F:/HDCA_TCL/HDL/ROT_thread.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'shift__parameterized11' [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'shift__parameterized11' (0#1) [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'shift' declared at 'F:/HDCA_TCL/HDL/shift.vhd:36' bound to instance 'u_shift' of component 'shift' [F:/HDCA_TCL/HDL/ROT_thread.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'shift__parameterized13' [F:/HDCA_TCL/HDL/shift.vhd:48]
+	Parameter amount bound to: 8 - type: integer 
+WARNING: [Synth 8-11358] null range expression ignored [F:/HDCA_TCL/HDL/shift.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'shift__parameterized13' (0#1) [F:/HDCA_TCL/HDL/shift.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'ROT_thread' (0#1) [F:/HDCA_TCL/HDL/ROT_thread.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'ROT_PE' (0#1) [F:/HDCA_TCL/HDL/ROT_PE.vhd:50]
+INFO: [Synth 8-3491] module 'PSUM_PE' declared at 'F:/HDCA_TCL/HDL/PSUM_PE.vhd:35' bound to instance 'uPSUM_PE' of component 'PSUM_PE' [F:/HDCA_TCL/HDL/HDCA.vhd:745]
+INFO: [Synth 8-638] synthesizing module 'PSUM_PE' [F:/HDCA_TCL/HDL/PSUM_PE.vhd:46]
+INFO: [Synth 8-3491] module 'PSUM_thread' declared at 'F:/HDCA_TCL/HDL/PSUM_thread.vhd:35' bound to instance 'uPSUM_thread' of component 'PSUM_thread' [F:/HDCA_TCL/HDL/PSUM_PE.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'PSUM_thread' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:47]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'ADD_1bit' [F:/HDCA_TCL/HDL/ADD_1bit.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'ADD_1bit' (0#1) [F:/HDCA_TCL/HDL/ADD_1bit.vhd:46]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'ADD_1bit' declared at 'F:/HDCA_TCL/HDL/ADD_1bit.vhd:35' bound to instance 'uAdd_1bit' of component 'ADD_1bit' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:74]
+INFO: [Synth 8-3491] module 'bcache_out_mux' declared at 'F:/HDCA_TCL/HDL/bcache_out_mux.vhd:33' bound to instance 'uPSUM_In_MUX' of component 'bcache_out_mux' [F:/HDCA_TCL/HDL/PSUM_thread.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'PSUM_thread' (0#1) [F:/HDCA_TCL/HDL/PSUM_thread.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'PSUM_PE' (0#1) [F:/HDCA_TCL/HDL/PSUM_PE.vhd:46]
+INFO: [Synth 8-3491] module 'MAJ_PE' declared at 'F:/HDCA_TCL/HDL/MAJ_PE.vhd:36' bound to instance 'uMAJ_PE' of component 'MAJ_PE' [F:/HDCA_TCL/HDL/HDCA.vhd:756]
+INFO: [Synth 8-638] synthesizing module 'MAJ_PE' [F:/HDCA_TCL/HDL/MAJ_PE.vhd:48]
+INFO: [Synth 8-3491] module 'MAJ_thread' declared at 'F:/HDCA_TCL/HDL/MAJ_thread.vhd:36' bound to instance 'uMAJ_thread' of component 'MAJ_thread' [F:/HDCA_TCL/HDL/MAJ_PE.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'MAJ_thread' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:48]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_1bit.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'MAJ_1bit' (0#1) [F:/HDCA_TCL/HDL/MAJ_1bit.vhd:45]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'MAJ_1bit' declared at 'F:/HDCA_TCL/HDL/MAJ_1bit.vhd:35' bound to instance 'uMAJ_1bit' of component 'MAJ_1bit' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:85]
+INFO: [Synth 8-3491] module 'intcache_out_mux' declared at 'F:/HDCA_TCL/HDL/intcache_out_mux.vhd:33' bound to instance 'uMAJ_In_MUX' of component 'intcache_out_mux' [F:/HDCA_TCL/HDL/MAJ_thread.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'intcache_out_mux' [F:/HDCA_TCL/HDL/intcache_out_mux.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'intcache_out_mux' (0#1) [F:/HDCA_TCL/HDL/intcache_out_mux.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'MAJ_thread' (0#1) [F:/HDCA_TCL/HDL/MAJ_thread.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'MAJ_PE' (0#1) [F:/HDCA_TCL/HDL/MAJ_PE.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'HDCA' (0#1) [F:/HDCA_TCL/HDL/HDCA.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'HDCA_top' (0#1) [F:/HDCA_TCL/HDL/HDCA_top.vhd:100]
+WARNING: [Synth 8-3848] Net m_axis_output_tkeep in module/entity stream_switch does not have driver. [F:/HDCA_TCL/HDL/stream_switch.vhd:62]
+WARNING: [Synth 8-3848] Net output_reg4 in module/entity control does not have driver. [F:/HDCA_TCL/HDL/control.vhd:53]
+WARNING: [Synth 8-3848] Net output_reg5 in module/entity control does not have driver. [F:/HDCA_TCL/HDL/control.vhd:54]
+WARNING: [Synth 8-3848] Net output_reg6 in module/entity control does not have driver. [F:/HDCA_TCL/HDL/control.vhd:55]
+WARNING: [Synth 8-3848] Net output_reg7 in module/entity control does not have driver. [F:/HDCA_TCL/HDL/control.vhd:56]
+WARNING: [Synth 8-7129] Port carry_in[7] in module shift__parameterized11 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[7] in module shift__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[6] in module shift__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[7] in module shift__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[6] in module shift__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[5] in module shift__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[7] in module shift__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[6] in module shift__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[5] in module shift__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[4] in module shift__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[7] in module shift__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[6] in module shift__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[5] in module shift__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[4] in module shift__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[3] in module shift__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[7] in module shift__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[6] in module shift__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[5] in module shift__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[4] in module shift__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[3] in module shift__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[2] in module shift__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[7] in module shift is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[6] in module shift is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[5] in module shift is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[4] in module shift is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[3] in module shift is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[2] in module shift is either unconnected or has no load
+WARNING: [Synth 8-7129] Port carry_in[1] in module shift is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rot_amount[3] in module ROT_thread is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_select[0] in module INTCache_In_MUX is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[31] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[30] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[29] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[28] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[27] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[26] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[25] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[24] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[23] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[22] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[21] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[20] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[19] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[18] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[17] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[16] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[15] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[14] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[13] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[12] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[11] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[10] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[9] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[8] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[7] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[6] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[5] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[4] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[3] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[2] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[1] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg4[0] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[31] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[30] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[29] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[28] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[27] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[26] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[25] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[24] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[23] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[22] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[21] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[20] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[19] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[18] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[17] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[16] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[15] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[14] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[13] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[12] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[11] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[10] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[9] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[8] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[7] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[6] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[5] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[4] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[3] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[2] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[1] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg5[0] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg6[31] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg6[30] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg6[29] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg6[28] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg6[27] in module control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port output_reg6[26] in module control is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 5039.176 ; gain = 4480.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:53 ; elapsed = 00:02:00 . Memory (MB): peak = 5042.309 ; gain = 4483.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:53 ; elapsed = 00:02:00 . Memory (MB): peak = 5042.309 ; gain = 4483.402
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Synth 8-802] inferred FSM for state register 'cstate_reg' in module 'stream_switch'
+INFO: [Synth 8-802] inferred FSM for state register 'cstate_reg' in module 'control'
+INFO: [Synth 8-802] inferred FSM for state register 'execute_state_reg' in module 'control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                 reading |                              001 |                              001
+          finish_reading |                              010 |                              010
+                 writing |                              011 |                              011
+          finish_writing |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cstate_reg' using encoding 'sequential' in module 'stream_switch'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   fetch |                             0000 |                            00000
+                  decode |                             0001 |                            00001
+                   nop_1 |                             0010 |                            00010
+                   bld_1 |                             0011 |                            00011
+                   bld_2 |                             0100 |                            00100
+                  bstr_1 |                             0101 |                            00101
+                   ild_1 |                             0110 |                            00110
+                  istr_1 |                             0111 |                            00111
+                xorlda_1 |                             1000 |                            01000
+                xorldb_1 |                             1001 |                            01001
+                rotlds_1 |                             1010 |                            01100
+               psumlds_1 |                             1011 |                            01110
+                majlds_1 |                             1100 |                            10001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'execute_state_reg' using encoding 'sequential' in module 'control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                             0001 |                               00
+                 iSTATE0 |                             0010 |                               01
+                  iSTATE |                             0100 |                               10
+*
+                 iSTATE2 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cstate_reg' using encoding 'one-hot' in module 'control'
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg' [F:/HDCA_TCL/HDL/bcache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[31]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[30]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[29]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[28]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[27]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[26]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[25]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[24]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[23]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[22]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[21]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[20]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[19]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[18]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[17]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[16]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[15]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[14]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[13]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[12]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[11]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[10]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[9]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[8]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[7]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[6]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[5]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[4]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[3]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[2]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[1]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'output_reg[0]' [F:/HDCA_TCL/HDL/INTCache_In_MUX.vhd:50]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:56 ; elapsed = 00:05:18 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 32    
+	   2 Input    6 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 32    
++---Registers : 
+	               32 Bit    Registers := 121   
+	                9 Bit    Registers := 6     
+	                8 Bit    Registers := 2147  
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 7     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 61    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 15    
+	   8 Input   32 Bit        Muxes := 8     
+	   5 Input   32 Bit        Muxes := 2     
+	   3 Input   32 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 4     
+	   8 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 6112  
+	  32 Input    8 Bit        Muxes := 1328  
+	   4 Input    8 Bit        Muxes := 256   
+	  32 Input    5 Bit        Muxes := 62    
+	   2 Input    5 Bit        Muxes := 7     
+	   5 Input    5 Bit        Muxes := 3     
+	  16 Input    5 Bit        Muxes := 1     
+	  13 Input    5 Bit        Muxes := 4     
+	   3 Input    5 Bit        Muxes := 2     
+	  17 Input    4 Bit        Muxes := 1     
+	  13 Input    4 Bit        Muxes := 1     
+	  16 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   4 Input    2 Bit        Muxes := 256   
+	   3 Input    2 Bit        Muxes := 1     
+	  13 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2161  
+	  32 Input    1 Bit        Muxes := 64    
+	   6 Input    1 Bit        Muxes := 2048  
+	  33 Input    1 Bit        Muxes := 1968  
+	   5 Input    1 Bit        Muxes := 19    
+	   3 Input    1 Bit        Muxes := 88    
+	  16 Input    1 Bit        Muxes := 6     
+	  17 Input    1 Bit        Muxes := 2     
+	  14 Input    1 Bit        Muxes := 5     
+	   8 Input    1 Bit        Muxes := 2     
+	  13 Input    1 Bit        Muxes := 34    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-5546' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'U_control/ctrl_sw_mem_select_reg[0]' (FDRE) to 'U_control/ctrl_sw_mem_select_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_control/\ctrl_sw_mem_select_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U_control/ctrl_sw_wr_nrd_reg)
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[0]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[1]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[2]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[3]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[4]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_stream_switch/\MAX_WORDS_reg[5] )
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[6]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[7]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[8]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[9]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[10]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[11]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[12]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[13]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[14]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[15]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[16]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[17]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[18]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[19]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[20]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[21]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[22]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[23]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[24]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[25]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[26]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[27]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[28]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[29]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/MAX_WORDS_reg[30]' (FDE_1) to 'u_stream_switch/MAX_WORDS_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_stream_switch/\MAX_WORDS_reg[31] )
+INFO: [Synth 8-3886] merging instance 'ctrl_registers/axi_rresp_reg[0]' (FDRE) to 'ctrl_registers/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ctrl_registers/\axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'ctrl_registers/axi_bresp_reg[0]' (FDRE) to 'ctrl_registers/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (ctrl_registers/\axi_bresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/mem_select_dec_ff_reg[1]' (FDRE_1) to 'u_stream_switch/mem_select_dec_ff_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/mem_select_dec_ff_reg[2]' (FDRE_1) to 'u_stream_switch/mem_select_dec_ff_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_stream_switch/\mem_select_dec_ff_reg[3] )
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/mem_select_ff_reg[0]' (FDRE_1) to 'u_stream_switch/mem_select_ff_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_stream_switch/\mem_select_ff_reg[1] )
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/wr_en_reg[1]' (FDRE_1) to 'u_stream_switch/wr_en_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/rd_en_reg[1]' (FDRE_1) to 'u_stream_switch/rd_en_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/rd_en_reg[2]' (FDRE_1) to 'u_stream_switch/rd_en_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_stream_switch/\rd_en_reg[3] )
+INFO: [Synth 8-3886] merging instance 'u_stream_switch/wr_en_reg[2]' (FDRE_1) to 'u_stream_switch/wr_en_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_stream_switch/\wr_en_reg[3] )
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'u_stream_switch/m_axis_output_tlast_reg/Q' [F:/HDCA_TCL/HDL/stream_switch.vhd:112]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [F:/HDCA_TCL/HDL/stream_switch.vhd:112]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [F:/HDCA_TCL/HDL/stream_switch.vhd:112]
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_cstate_reg[3]) is unused and will be removed from module control.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:07:22 ; elapsed = 00:07:53 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:07:31 ; elapsed = 00:08:03 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:07:38 ; elapsed = 00:08:11 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:07:53 ; elapsed = 00:08:30 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:07:53 ; elapsed = 00:08:30 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:07:56 ; elapsed = 00:08:32 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:07:56 ; elapsed = 00:08:33 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:07:58 ; elapsed = 00:08:35 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:07:58 ; elapsed = 00:08:35 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     5|
+|2     |CARRY8 |    44|
+|3     |LUT1   |    37|
+|4     |LUT2   |   321|
+|5     |LUT3   |  6039|
+|6     |LUT4   |  5668|
+|7     |LUT5   |  1896|
+|8     |LUT6   |  7357|
+|9     |MUXF7  |  2664|
+|10    |FDRE   | 21155|
+|11    |FDSE   |     7|
+|12    |LD     |   656|
+|13    |IBUF   |    86|
+|14    |OBUF   |    76|
+|15    |OBUFT  |     4|
++------+-------+------+
+
+Report Instance Areas: 
++------+------------------------------------------------+------------------+------+
+|      |Instance                                        |Module            |Cells |
++------+------------------------------------------------+------------------+------+
+|1     |top                                             |                  | 46015|
+|2     |  U_HDCA                                        |HDCA              | 45844|
+|3     |    \U_binary_cache_MUXs[0].U_binary_cache_MUX  |bcache_In_MUX     |    64|
+|4     |    \U_binary_cache_MUXs[1].U_binary_cache_MUX  |bcache_In_MUX_0   |    64|
+|5     |    U_control                                   |control           |  6208|
+|6     |      U_Icache                                  |inst_cache        |  1907|
+|7     |    \U_int_cache_MUXs[2].U_int_cache_MUX        |INTCache_In_MUX   |  5278|
+|8     |    \U_int_cache_MUXs[3].U_int_cache_MUX        |INTCache_In_MUX_1 |  5278|
+|9     |    \binary_caches[0].U_bcache                  |binary_cache      |  1920|
+|10    |    \binary_caches[1].U_bcache                  |binary_cache_2    |  1472|
+|11    |    ctrl_registers                              |axi_ctrl          |   437|
+|12    |    \int_caches[2].U_intcache                   |int_cache         | 11776|
+|13    |    \int_caches[3].U_intcache                   |int_cache_3       | 11904|
+|14    |    uMAJ_PE                                     |MAJ_PE            |   232|
+|15    |      \uMAJ_threads[0].uMAJ_thread              |MAJ_thread        |   232|
+|16    |        \maj_1bit_vector[0].uMAJ_1bit           |MAJ_1bit          |     7|
+|17    |        \maj_1bit_vector[10].uMAJ_1bit          |MAJ_1bit_36       |     7|
+|18    |        \maj_1bit_vector[11].uMAJ_1bit          |MAJ_1bit_37       |     7|
+|19    |        \maj_1bit_vector[12].uMAJ_1bit          |MAJ_1bit_38       |     7|
+|20    |        \maj_1bit_vector[13].uMAJ_1bit          |MAJ_1bit_39       |     7|
+|21    |        \maj_1bit_vector[14].uMAJ_1bit          |MAJ_1bit_40       |     7|
+|22    |        \maj_1bit_vector[15].uMAJ_1bit          |MAJ_1bit_41       |     7|
+|23    |        \maj_1bit_vector[16].uMAJ_1bit          |MAJ_1bit_42       |     7|
+|24    |        \maj_1bit_vector[17].uMAJ_1bit          |MAJ_1bit_43       |     7|
+|25    |        \maj_1bit_vector[18].uMAJ_1bit          |MAJ_1bit_44       |     7|
+|26    |        \maj_1bit_vector[19].uMAJ_1bit          |MAJ_1bit_45       |     7|
+|27    |        \maj_1bit_vector[1].uMAJ_1bit           |MAJ_1bit_46       |     7|
+|28    |        \maj_1bit_vector[20].uMAJ_1bit          |MAJ_1bit_47       |     7|
+|29    |        \maj_1bit_vector[21].uMAJ_1bit          |MAJ_1bit_48       |     7|
+|30    |        \maj_1bit_vector[22].uMAJ_1bit          |MAJ_1bit_49       |     7|
+|31    |        \maj_1bit_vector[23].uMAJ_1bit          |MAJ_1bit_50       |     7|
+|32    |        \maj_1bit_vector[24].uMAJ_1bit          |MAJ_1bit_51       |     7|
+|33    |        \maj_1bit_vector[25].uMAJ_1bit          |MAJ_1bit_52       |     7|
+|34    |        \maj_1bit_vector[26].uMAJ_1bit          |MAJ_1bit_53       |     7|
+|35    |        \maj_1bit_vector[27].uMAJ_1bit          |MAJ_1bit_54       |     7|
+|36    |        \maj_1bit_vector[28].uMAJ_1bit          |MAJ_1bit_55       |     7|
+|37    |        \maj_1bit_vector[29].uMAJ_1bit          |MAJ_1bit_56       |     7|
+|38    |        \maj_1bit_vector[2].uMAJ_1bit           |MAJ_1bit_57       |     7|
+|39    |        \maj_1bit_vector[30].uMAJ_1bit          |MAJ_1bit_58       |     7|
+|40    |        \maj_1bit_vector[31].uMAJ_1bit          |MAJ_1bit_59       |     7|
+|41    |        \maj_1bit_vector[3].uMAJ_1bit           |MAJ_1bit_60       |     7|
+|42    |        \maj_1bit_vector[4].uMAJ_1bit           |MAJ_1bit_61       |     7|
+|43    |        \maj_1bit_vector[5].uMAJ_1bit           |MAJ_1bit_62       |     7|
+|44    |        \maj_1bit_vector[6].uMAJ_1bit           |MAJ_1bit_63       |     7|
+|45    |        \maj_1bit_vector[7].uMAJ_1bit           |MAJ_1bit_64       |     7|
+|46    |        \maj_1bit_vector[8].uMAJ_1bit           |MAJ_1bit_65       |     7|
+|47    |        \maj_1bit_vector[9].uMAJ_1bit           |MAJ_1bit_66       |     7|
+|48    |    uPSUM_PE                                    |PSUM_PE           |   544|
+|49    |      \uPSUM_threads[0].uPSUM_thread            |PSUM_thread       |   544|
+|50    |        \add_1bit_vector[0].uAdd_1bit           |ADD_1bit          |    17|
+|51    |        \add_1bit_vector[10].uAdd_1bit          |ADD_1bit_5        |    17|
+|52    |        \add_1bit_vector[11].uAdd_1bit          |ADD_1bit_6        |    17|
+|53    |        \add_1bit_vector[12].uAdd_1bit          |ADD_1bit_7        |    17|
+|54    |        \add_1bit_vector[13].uAdd_1bit          |ADD_1bit_8        |    17|
+|55    |        \add_1bit_vector[14].uAdd_1bit          |ADD_1bit_9        |    17|
+|56    |        \add_1bit_vector[15].uAdd_1bit          |ADD_1bit_10       |    17|
+|57    |        \add_1bit_vector[16].uAdd_1bit          |ADD_1bit_11       |    17|
+|58    |        \add_1bit_vector[17].uAdd_1bit          |ADD_1bit_12       |    17|
+|59    |        \add_1bit_vector[18].uAdd_1bit          |ADD_1bit_13       |    17|
+|60    |        \add_1bit_vector[19].uAdd_1bit          |ADD_1bit_14       |    17|
+|61    |        \add_1bit_vector[1].uAdd_1bit           |ADD_1bit_15       |    17|
+|62    |        \add_1bit_vector[20].uAdd_1bit          |ADD_1bit_16       |    17|
+|63    |        \add_1bit_vector[21].uAdd_1bit          |ADD_1bit_17       |    17|
+|64    |        \add_1bit_vector[22].uAdd_1bit          |ADD_1bit_18       |    17|
+|65    |        \add_1bit_vector[23].uAdd_1bit          |ADD_1bit_19       |    17|
+|66    |        \add_1bit_vector[24].uAdd_1bit          |ADD_1bit_20       |    17|
+|67    |        \add_1bit_vector[25].uAdd_1bit          |ADD_1bit_21       |    17|
+|68    |        \add_1bit_vector[26].uAdd_1bit          |ADD_1bit_22       |    17|
+|69    |        \add_1bit_vector[27].uAdd_1bit          |ADD_1bit_23       |    17|
+|70    |        \add_1bit_vector[28].uAdd_1bit          |ADD_1bit_24       |    17|
+|71    |        \add_1bit_vector[29].uAdd_1bit          |ADD_1bit_25       |    17|
+|72    |        \add_1bit_vector[2].uAdd_1bit           |ADD_1bit_26       |    17|
+|73    |        \add_1bit_vector[30].uAdd_1bit          |ADD_1bit_27       |    17|
+|74    |        \add_1bit_vector[31].uAdd_1bit          |ADD_1bit_28       |    17|
+|75    |        \add_1bit_vector[3].uAdd_1bit           |ADD_1bit_29       |    17|
+|76    |        \add_1bit_vector[4].uAdd_1bit           |ADD_1bit_30       |    17|
+|77    |        \add_1bit_vector[5].uAdd_1bit           |ADD_1bit_31       |    17|
+|78    |        \add_1bit_vector[6].uAdd_1bit           |ADD_1bit_32       |    17|
+|79    |        \add_1bit_vector[7].uAdd_1bit           |ADD_1bit_33       |    17|
+|80    |        \add_1bit_vector[8].uAdd_1bit           |ADD_1bit_34       |    17|
+|81    |        \add_1bit_vector[9].uAdd_1bit           |ADD_1bit_35       |    17|
+|82    |    uROT_PE                                     |ROT_PE            |   140|
+|83    |      \uROT_threads[0].uROT_thread              |ROT_thread        |   140|
+|84    |        uROT_In_MUX                             |bcache_out_mux_4  |    32|
+|85    |    uXOR_PE                                     |XOR_PE            |    96|
+|86    |      \uXOR_threads[0].uXOR_thread              |XOR_thread        |    96|
+|87    |        uXOR_In_MUX                             |bcache_out_mux    |    32|
+|88    |    u_stream_switch                             |stream_switch     |   431|
++------+------------------------------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:07:59 ; elapsed = 00:08:35 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 452 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:07:59 ; elapsed = 00:08:40 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+Synthesis Optimization Complete : Time (s): cpu = 00:07:59 ; elapsed = 00:08:40 . Memory (MB): peak = 5144.438 ; gain = 4585.531
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.654 . Memory (MB): peak = 5144.438 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3455 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 5144.438 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 747 instances were transformed.
+  BUFG => BUFGCE: 5 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 86 instances
+  LD => LDCE: 656 instances
+
+Synth Design complete | Checksum: 3eae72dc
+INFO: [Common 17-83] Releasing license: Synthesis
+333 Infos, 144 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:08:14 ; elapsed = 00:08:58 . Memory (MB): peak = 5144.438 ; gain = 4590.484
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 5144.438 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'F:/HDCA_TCL/my_HDC_sim2/my_HDC_sim2.runs/synth_1/HDCA_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 5144.438 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file HDCA_top_utilization_synth.rpt -pb HDCA_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 28 17:16:00 2024...
